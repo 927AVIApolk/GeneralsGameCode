@@ -347,7 +347,7 @@ void GameLODManager::init()
 			StaticGameLODLevel currentLevel=STATIC_GAME_LOD_LOW;
 			BenchProfile *prof=m_benchProfiles;
 			m_cpuType = P3;	//assume lowest spec.
-			m_cpuFreq = 1000;	//assume lowest spec.
+			m_cpuFreq = 2000;	//assume lowest spec.
 			for (Int k=0; k<m_numBenchProfiles; k++)
 			{
 				//Check if we're within 5% of the performance of this cpu profile.
