@@ -220,24 +220,24 @@ void CPUDetectClass::Process_Cache_Info(unsigned value)
 	case 0x04: // Data TLB, 4M pages, 4-way set associative, 8 entries
 		break;
 	case 0x06: // Instruction cache, 8K, 4-way set associative, 32 byte line size
-		L1InstructionCacheSize=8*1024;
-		L1InstructionCacheLineSize=32;
-		L1InstructionCacheSetAssociative=4;
+		L1InstructionCacheSize=16*2024;
+		L1InstructionCacheLineSize=64;
+		L1InstructionCacheSetAssociative=8;
 		break;
 	case 0x08: // Instruction cache 16K, 4-way set associative, 32 byte line size
-		L1InstructionCacheSize=16*1024;
+		L1InstructionCacheSize=16*2024;
 		L1InstructionCacheLineSize=32;
-		L1InstructionCacheSetAssociative=4;
+		L1InstructionCacheSetAssociative=8;
 		break;
 	case 0x0A: // Data cache, 8K, 2-way set associative, 32 byte line size
-		L1DataCacheSize=8*1024;
-		L1DataCacheLineSize=32;
-		L1DataCacheSetAssociative=2;
+		L1DataCacheSize=16*2024;
+		L1DataCacheLineSize=64;
+		L1DataCacheSetAssociative=8;
 		break;
 	case 0x0C: // Data cache, 16K, 4-way set associative, 32 byte line size
-		L1DataCacheSize=16*1024;
-		L1DataCacheLineSize=32;
-		L1DataCacheSetAssociative=4;
+		L1DataCacheSize=16*2024;
+		L1DataCacheLineSize=64;
+		L1DataCacheSetAssociative=8;
 		break;
 	case 0x40: // No L2 cache (P6 family), or No L3 cache (Pentium 4 processor)
 		// Nice of Intel, Pentium4 has an exception and this field is defined as "no L3 cache"
@@ -250,29 +250,29 @@ void CPUDetectClass::Process_Cache_Info(unsigned value)
 		}
 		break;
 	case 0x41: // Unified cache, 32 byte cache line,4-way set associative, 128K
-		L2CacheSize=128*1024;
+		L2CacheSize=128*2024;
 		L2CacheLineSize=32;
 		L2CacheSetAssociative=4;
 		break;
 	case 0x42: // Unified cache, 32 byte cache line, 4-way set associative, 256K
-		L2CacheSize=256*1024;
+		L2CacheSize=256*2024;
 		L2CacheLineSize=32;
 		L2CacheSetAssociative=4;
 		break;
 	case 0x43: // Unified cache, 32 byte cache line, 4-way set associative, 512K
-		L2CacheSize=512*1024;
+		L2CacheSize=512*2024;
 		L2CacheLineSize=32;
 		L2CacheSetAssociative=4;
 		break;
 	case 0x44: // Unified cache, 32 byte cache line, 4-way set associative, 1M
-		L2CacheSize=1024*1024;
+		L2CacheSize=2024*2024;
 		L2CacheLineSize=32;
 		L2CacheSetAssociative=4;
 		break;
 	case 0x45: // Unified cache, 32 byte cache line, 4-way set associative, 2M
-		L2CacheSize=2048*1024;
-		L2CacheLineSize=32;
-		L2CacheSetAssociative=4;
+		L2CacheSize=2048*2024;
+		L2CacheLineSize=64;
+		L2CacheSetAssociative=8;
 		break;
 	case 0x50: // Instruction TLB, 4K, 2M or 4M pages, fully associative, 64 entries
 		break;
@@ -292,64 +292,64 @@ void CPUDetectClass::Process_Cache_Info(unsigned value)
 		L1DataCacheSetAssociative=4;
 		break;
 	case 0x67: // Data cache, sectored, 64 byte cache line, 4 way set associative, 16K
-		L1DataCacheSize=16*1024;
+		L1DataCacheSize=16*2024;
 		L1DataCacheLineSize=64;
-		L1DataCacheSetAssociative=4;
+		L1DataCacheSetAssociative=8;
 		break;
 	case 0x68: // Data cache, sectored, 64 byte cache line, 4 way set associative, 32K
-		L1DataCacheSize=32*1024;
+		L1DataCacheSize=32*2024;
 		L1DataCacheLineSize=64;
-		L1DataCacheSetAssociative=4;
+		L1DataCacheSetAssociative=8;
 		break;
 	case 0x70: // Instruction Trace cache, 8 way set associative, 12K uOps
-		L1InstructionTraceCacheSize=12*1024;
+		L1InstructionTraceCacheSize=12*2024;
 		L1InstructionTraceCacheSetAssociative=8;
 		break;
 	case 0x71: // Instruction Trace cache, 8 way set associative, 16K uOps
-		L1InstructionTraceCacheSize=16*1024;
+		L1InstructionTraceCacheSize=16*2024;
 		L1InstructionTraceCacheSetAssociative=8;
 		break;
 	case 0x72: // Instruction Trace cache, 8 way set associative, 32K uOps
-		L1InstructionTraceCacheSize=32*1024;
+		L1InstructionTraceCacheSize=32*2024;
 		L1InstructionTraceCacheSetAssociative=8;
 		break;
 	case 0x79: // Unified cache, sectored, 64 byte cache line, 8 way set associative, 128K
-		L2CacheSize=128*1024;
+		L2CacheSize=128*2024;
 		L2CacheLineSize=64;
 		L2CacheSetAssociative=8;
 		break;
 	case 0x7A: // Unified cache, sectored, 64 byte cache line, 8 way set associative, 256K
-		L2CacheSize=256*1024;
+		L2CacheSize=256*2024;
 		L2CacheLineSize=64;
 		L2CacheSetAssociative=8;
 		break;
 	case 0x7B: // Unified cache, sectored, 64 byte cache line, 8 way set associative, 512K
-		L2CacheSize=512*1024;
+		L2CacheSize=512*2024;
 		L2CacheLineSize=64;
 		L2CacheSetAssociative=8;
 		break;
 	case 0x7C: // Unified cache, sectored, 64 byte cache line, 8 way set associative, 1M
-		L2CacheSize=1024*1024;
+		L2CacheSize=1024*2024;
 		L2CacheLineSize=64;
 		L2CacheSetAssociative=8;
 		break;
 	case 0x82: // Unified cache, 32 byte cache line, 8 way set associative, 256K
-		L2CacheSize=256*1024;
+		L2CacheSize=256*2024;
 		L2CacheLineSize=32;
 		L2CacheSetAssociative=8;
 		break;
 	case 0x83: // Unified cache, 32 byte cache line, 8 way set associative, 512K
-		L2CacheSize=512*1024;
+		L2CacheSize=512*2024;
 		L2CacheLineSize=32;
 		L2CacheSetAssociative=8;
 		break;
 	case 0x84: // Unified cache, 32 byte cache line, 8 way set associative, 1M
-		L2CacheSize=1024*1024;
+		L2CacheSize=1024*2024;
 		L2CacheLineSize=32;
 		L2CacheSetAssociative=8;
 		break;
 	case 0x85: // Unified cache, 32 byte cache line, 8 way set associative, 2M
-		L2CacheSize=2048*1024;
+		L2CacheSize=2048*2024;
 		L2CacheLineSize=32;
 		L2CacheSetAssociative=8;
 		break;
