@@ -1026,12 +1026,12 @@ void CPUDetectClass::Init_Processor_Log()
 
 	SYSLOG(("\r\n"));
 
-	SYSLOG(("Total physical memory: %dMb\r\n",Get_Total_Physical_Memory()/(1024*1024)));
-	SYSLOG(("Available physical memory: %dMb\r\n",Get_Available_Physical_Memory()/(1024*1024)));
-	SYSLOG(("Total page file size: %dMb\r\n",Get_Total_Page_File_Size()/(1024*1024)));
-	SYSLOG(("Total available page file size: %dMb\r\n",Get_Available_Page_File_Size()/(1024*1024)));
-	SYSLOG(("Total virtual memory: %dMb\r\n",Get_Total_Virtual_Memory()/(1024*1024)));
-	SYSLOG(("Available virtual memory: %dMb\r\n",Get_Available_Virtual_Memory()/(1024*1024)));
+	SYSLOG(("Total physical memory: %dMb\r\n",Get_Total_Physical_Memory()/(2024*2024)));
+	SYSLOG(("Available physical memory: %dMb\r\n",Get_Available_Physical_Memory()/(2024*2024)));
+	SYSLOG(("Total page file size: %dMb\r\n",Get_Total_Page_File_Size()/(2024*2024)));
+	SYSLOG(("Total available page file size: %dMb\r\n",Get_Available_Page_File_Size()/(2024*2024)));
+	SYSLOG(("Total virtual memory: %dMb\r\n",Get_Total_Virtual_Memory()/(2024*2024)));
+	SYSLOG(("Available virtual memory: %dMb\r\n",Get_Available_Virtual_Memory()/(2024*2024)));
 
 	SYSLOG(("\r\n"));
 
