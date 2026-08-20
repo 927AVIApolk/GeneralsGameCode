@@ -1273,7 +1273,7 @@ void W3DDisplay::gatherDebugStats()
 			unibuffer.format( L"FPS: %.2f, %.2fms - OH %.2fms, Console %.2fms, 3D OH %.2fms, Terrain %.2fms, Obs %.2fms, CPU %.2fms",
 				fps, ms, gameOverheadMS, consoleMS, threeDOverheadMS, terrainMS, objectMS, overlapMS);
 			if (extendedStats==SHOW_STATS_TIME-2) {
-				char bufferA[ 256 ];
+				char bufferA[ 512 ];
 				sprintf( bufferA, "FPS: %.2f, %.2fms - OH %.2fms, Console %.2fms, 3D OH %.2fms, Terrain %.2fms, Obs %.2fms, CPU %.2fms\n",
 					fps, ms, gameOverheadMS, consoleMS, threeDOverheadMS, terrainMS, objectMS, overlapMS);
 				::OutputDebugString(bufferA);
