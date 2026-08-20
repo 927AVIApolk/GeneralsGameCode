@@ -229,7 +229,7 @@ GameLODManager::GameLODManager()
 	m_memBenchIndex=0;
 	m_compositeBenchIndex=0;
 	m_numBenchProfiles=0;
-	m_reallyLowMHz = 400;
+	m_reallyLowMHz = 2000;
 
 	for (Int i=0; i<STATIC_GAME_LOD_CUSTOM; i++)
 		m_numLevelPresets[i]=0;
